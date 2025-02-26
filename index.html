@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page">
+
+        <div class="message hidden"></div>
+
+        <div class="btns">
+          <button class="btn">LOGIN</button>
+          <button class="btn_two">Registrate</button>
+        </div>
+    
+        <div class="login hidden modal">
+          <form class="form">
+            <h2>Login</h2>
+            <label>
+              <input type="text" placeholder="Name" name="name" required autocomplete="off">
+            </label>
+            <label>
+              <input type="password" placeholder="Password" name="pas" required autocomplete="new-password">
+            </label>
+            <button class="login_btn">LOG IN</button>
+          </form>
+        </div>
+    
+        <div class="registration hidden modal">
+          <form class="form">
+            <h2>Registrate</h2>
+            <label>
+              <input type="text" placeholder="Name" name="name" required autocomplete="off">
+            </label>
+            <label>
+              <input type="password" placeholder="Password" name="pas" required autocomplete="new-password">
+            </label>
+            <button class="reg_btn">Registrate</button>
+            <button class="gen_btn">Create your password!</button>
+          </form>
+        </div>
+    
+        <div class="modal_pas hidden modal">
+          <form class="modal_pas_form">
+            <h2>Password Generator</h2>
+            <div class="modal_new_pas"></div>
+            <button class="modal_copy">Copy to clipboard</button>
+            <label>
+              <input type="range" name="length" class="range_length" min="6" max="30" value="6">
+              <span id="pas_value">6</span>
+            </label>
+            <div class="modal_check">
+              <label>
+                <input type="checkbox" name="upper">
+                Uppercase
+              </label>
+              <label>
+                <input type="checkbox" name="numbers">
+                Numbers
+              </label>
+              <label>
+                <input type="checkbox" name="simbols">
+                Special characters
+              </label>
+            </div>
+            <button class="modal_btn">New Password</button>
+          </form>
+        </div>
+      </div>
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDPQF1ibwcrOT6Skt7TbZVhhU1DTdAxdB0",
+          authDomain: "passwordget.firebaseapp.com",
+          databaseURL: "https://passwordget-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "passwordget",
+          storageBucket: "passwordget.firebasestorage.app",
+          messagingSenderId: "848005319655",
+          appId: "1:848005319655:web:5eff7edffbd95454ad0b42"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+      </script>
+
+
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>
